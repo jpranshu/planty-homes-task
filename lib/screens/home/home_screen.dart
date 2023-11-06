@@ -10,6 +10,7 @@ import 'package:planty_homes/screens/home/widget/nursery_card.dart';
 import 'package:planty_homes/screens/home/widget/nursery_flex.dart';
 import 'package:planty_homes/screens/home/widget/search_field.dart';
 import 'package:planty_homes/screens/home/widget/dropdown.dart';
+import 'package:planty_homes/location.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -53,7 +54,14 @@ class _HomeScreenState extends State<HomeScreen> {
             child: IconButton(
               iconSize: 30,
               icon: const Icon(Icons.location_on),
-              onPressed: () {},
+              onPressed: () {
+                // Navigate to the location picker screen
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => LocationPickerScreen()),
+                );
+              },
               color: Colors.white,
             ),
           ),
