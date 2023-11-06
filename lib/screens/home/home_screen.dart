@@ -8,6 +8,8 @@ import 'package:planty_homes/screens/home/widget/choice.dart';
 import 'package:planty_homes/screens/home/widget/nursery.dart';
 import 'package:planty_homes/screens/home/widget/nursery_card.dart';
 import 'package:planty_homes/screens/home/widget/nursery_flex.dart';
+import 'package:planty_homes/screens/home/widget/search_field.dart';
+import 'package:planty_homes/screens/home/widget/dropdown.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -45,9 +47,58 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.green,
-        title: const Text(
-          'Planty Homes',
-          style: TextStyle(color: Colors.white),
+        leading: GestureDetector(
+          onTap: () {},
+          child: Container(
+            child: IconButton(
+              iconSize: 30,
+              icon: const Icon(Icons.location_on),
+              onPressed: () {},
+              color: Colors.white,
+            ),
+          ),
+        ),
+        title: const Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Home',
+                  style: TextStyle(
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
+                ),
+                Text(
+                  'Pau Sector 35, Chandigarh',
+                  style: TextStyle(
+                    fontSize: 16,
+                    color: Colors.white,
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
+        actions: [
+          GestureDetector(
+            onTap: () {},
+            child: Container(
+              margin: const EdgeInsets.only(right: 5),
+              child: IconButton(
+                iconSize: 40,
+                icon: const Icon(Icons.account_circle_sharp),
+                onPressed: () {},
+              ),
+            ),
+          ),
+        ],
+        bottom: const PreferredSize(
+          preferredSize: Size.fromHeight(60),
+          child: SearchField(),
         ),
       ),
       // ignore: sized_box_for_whitespace
@@ -63,12 +114,62 @@ class _HomeScreenState extends State<HomeScreen> {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                Padding(
+                  padding: EdgeInsets.symmetric(
+                    vertical: size.height * 0.01,
+                    horizontal: size.width * 0.001,
+                  ),
+                  child: Row(
+                    children: [
+                      Dropdown(),
+                      SizedBox(
+                        width: size.width * 0.02,
+                      ),
+                      OutlinedButton(
+                        onPressed: () {},
+                        child: const Text(
+                          'Gifts',
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 12,
+                              fontWeight: FontWeight.w500),
+                        ),
+                      ),
+                      SizedBox(
+                        width: size.width * 0.001,
+                      ),
+                      OutlinedButton(
+                        onPressed: () {},
+                        child: const Text(
+                          'Fast Delivery',
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 12,
+                              fontWeight: FontWeight.w500),
+                        ),
+                      ),
+                      SizedBox(
+                        width: size.width * 0.001,
+                      ),
+                      OutlinedButton(
+                        onPressed: () {},
+                        child: const Text(
+                          'Ceramic',
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 12,
+                              fontWeight: FontWeight.w500),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
                 Text(
                   "What's New",
                   style: TextStyle(
                     color: Colors.green,
                     fontSize: size.height * 0.035,
-                    fontWeight: FontWeight.w600,
+                    fontWeight: FontWeight.w800,
                   ),
                 ),
                 SizedBox(
@@ -116,11 +217,11 @@ class _HomeScreenState extends State<HomeScreen> {
                   height: size.height * 0.02,
                 ),
                 Text(
-                  "What to Plant Today",
+                  "What to Plant Today?",
                   style: TextStyle(
                     color: Colors.green,
                     fontSize: size.height * 0.035,
-                    fontWeight: FontWeight.w600,
+                    fontWeight: FontWeight.w800,
                   ),
                 ),
                 SizedBox(
@@ -148,7 +249,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   style: TextStyle(
                     color: Colors.green,
                     fontSize: size.height * 0.035,
-                    fontWeight: FontWeight.w600,
+                    fontWeight: FontWeight.w800,
                   ),
                 ),
                 SizedBox(
@@ -172,7 +273,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   style: TextStyle(
                     color: Colors.green,
                     fontSize: size.height * 0.035,
-                    fontWeight: FontWeight.w600,
+                    fontWeight: FontWeight.w800,
                   ),
                 ),
                 SizedBox(
