@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 const List<String> list = <String>[
   'Sort',
-  'Price: High to Low',
-  'Price: Low to High',
+  'High to Low',
+  'Low to High',
   'Popular',
   'Trending'
 ];
@@ -39,7 +39,7 @@ class _DropdownState extends State<Dropdown> {
           ),
         );
       }).toList(),
-      iconSize: 20,
+      iconSize: 10,
     );
   }
 }

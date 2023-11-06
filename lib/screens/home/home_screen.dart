@@ -115,7 +115,7 @@ class _HomeScreenState extends State<HomeScreen> {
         child: SingleChildScrollView(
           child: Padding(
             padding: EdgeInsets.symmetric(
-              horizontal: size.width * 0.03,
+              horizontal: size.width * 0.05,
               vertical: size.height * 0.012,
             ),
             child: Column(
@@ -128,6 +128,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     horizontal: size.width * 0.001,
                   ),
                   child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       const Dropdown(),
                       SizedBox(
@@ -135,6 +136,10 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                       OutlinedButton(
                         onPressed: () {},
+                        style: ButtonStyle(
+                          maximumSize: MaterialStateProperty.all(Size(
+                              65, 50)), // Set your desired width and height
+                        ),
                         child: const Text(
                           'Gifts',
                           style: TextStyle(
@@ -144,10 +149,14 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       ),
                       SizedBox(
-                        width: size.width * 0.001,
+                        width: size.width * 0.004,
                       ),
                       OutlinedButton(
                         onPressed: () {},
+                        style: ButtonStyle(
+                          maximumSize: MaterialStateProperty.all(Size(
+                              110, 50)), // Set your desired width and height
+                        ),
                         child: const Text(
                           'Fast Delivery',
                           style: TextStyle(
@@ -157,10 +166,14 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       ),
                       SizedBox(
-                        width: size.width * 0.001,
+                        width: size.width * 0.004,
                       ),
                       OutlinedButton(
                         onPressed: () {},
+                        style: ButtonStyle(
+                          maximumSize: MaterialStateProperty.all(Size(
+                              80, 50)), // Set your desired width and height
+                        ),
                         child: const Text(
                           'Ceramic',
                           style: TextStyle(
@@ -176,7 +189,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   "What's New",
                   style: TextStyle(
                     color: Colors.green,
-                    fontSize: size.height * 0.035,
+                    fontSize: size.height * 0.03,
                     fontWeight: FontWeight.w800,
                   ),
                 ),
@@ -228,7 +241,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   "What to Plant Today?",
                   style: TextStyle(
                     color: Colors.green,
-                    fontSize: size.height * 0.035,
+                    fontSize: size.height * 0.03,
                     fontWeight: FontWeight.w800,
                   ),
                 ),
@@ -256,12 +269,12 @@ class _HomeScreenState extends State<HomeScreen> {
                   "Featured Nurseries",
                   style: TextStyle(
                     color: Colors.green,
-                    fontSize: size.height * 0.035,
+                    fontSize: size.height * 0.03,
                     fontWeight: FontWeight.w800,
                   ),
                 ),
                 SizedBox(
-                  height: size.height * 0.03,
+                  height: size.height * 0.02,
                 ),
                 // ignore: sized_box_for_whitespace
                 Container(
@@ -274,18 +287,18 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
                 SizedBox(
-                  height: size.height * 0.03,
+                  height: size.height * 0.02,
                 ),
                 Text(
                   "Nurseries Around You",
                   style: TextStyle(
                     color: Colors.green,
-                    fontSize: size.height * 0.035,
+                    fontSize: size.height * 0.03,
                     fontWeight: FontWeight.w800,
                   ),
                 ),
                 SizedBox(
-                  height: size.height * 0.025,
+                  height: size.height * 0.02,
                 ),
 
                 NurseryFlex(nurseryInstance: outlet[0]),

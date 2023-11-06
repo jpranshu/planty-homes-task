@@ -9,10 +9,10 @@ class NurseryCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
-    const TextStyle cardText = TextStyle(
+    TextStyle cardText = TextStyle(
         color: Color.fromARGB(255, 116, 20, 13),
         fontWeight: FontWeight.w800,
-        fontSize: 12);
+        fontSize: size.height * 0.012);
     return Card(
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(size.height * 0.02),
@@ -51,9 +51,9 @@ class NurseryCard extends StatelessWidget {
                 Text(
                   nurseryInstance.title,
                   textAlign: TextAlign.left,
-                  style: const TextStyle(
+                  style: TextStyle(
                       color: Colors.black,
-                      fontSize: 22,
+                      fontSize: size.height * 0.022,
                       fontWeight: FontWeight.w800),
                 ),
                 SizedBox(

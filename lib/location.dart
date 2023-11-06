@@ -8,14 +8,14 @@ class LocationPickerScreen extends StatefulWidget {
 
 class _LocationPickerScreenState extends State<LocationPickerScreen> {
   late GoogleMapController mapController;
-  final LatLng defaultLocation = LatLng(37.7749, -122.4194); // Default location
+  final LatLng defaultLocation = LatLng(27.3314, 88.6138); // Default location
   LatLng pickedLocation =
-      LatLng(37.7749, -122.4194); // Initialize with default location
+      LatLng(27.3314, 88.6138); // Initialize with default location
   MarkerId markerId = MarkerId("picked_location");
   Set<Marker> markers = {
     Marker(
         markerId: MarkerId("picked_location"),
-        position: LatLng(37.7749, -122.4194))
+        position: LatLng(27.3314, 88.6138))
   };
 
   @override

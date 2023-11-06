@@ -9,15 +9,15 @@ class NurseryFlex extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
-    const TextStyle cardText = TextStyle(
+    TextStyle cardText = TextStyle(
         color: Color.fromARGB(255, 116, 20, 13),
         fontWeight: FontWeight.w800,
-        fontSize: 12);
+        fontSize: size.height * 0.012);
     return Card(
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(size.height * 0.02),
         side: BorderSide(
-          width: size.width * 0.002,
+          width: size.width * 0.0015,
           color: const Color.fromARGB(255, 116, 20, 13),
         ),
       ),
