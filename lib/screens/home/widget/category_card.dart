@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:planty_homes/screens/home/widget/choice.dart';
 
-class SelectCard extends StatelessWidget {
-  const SelectCard({Key? key, required this.choice}) : super(key: key);
+class CategoryCard extends StatelessWidget {
+  const CategoryCard({Key? key, required this.choice}) : super(key: key);
   final Choice choice;
 
   @override

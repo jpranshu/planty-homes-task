@@ -132,7 +132,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     crossAxisCount: 4,
                     children: List.generate(choices.length, (index) {
                       return Center(
-                        child: SelectCard(choice: choices[index]),
+                        child: CategoryCard(choice: choices[index]),
                       );
                     }),
                   ),
