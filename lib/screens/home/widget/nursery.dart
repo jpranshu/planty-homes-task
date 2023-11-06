@@ -33,7 +33,7 @@ const List<Nursery> outlet = <Nursery>[
     distance: '20 KM',
     rating: 4.5,
     price: 450,
-    category: ['Flower', 'Ceramic'],
+    category: ['Flower', 'Ceramic', 'Vegetable', 'Religious'],
   ),
   Nursery(
     title: 'Nursery 3',

@@ -43,7 +43,7 @@ class NurseryFlex extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: size.width * 0.01),
+            padding: EdgeInsets.symmetric(horizontal: size.width * 0.03),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -72,7 +72,7 @@ class NurseryFlex extends StatelessWidget {
                       style: cardText,
                     ),
                     SizedBox(
-                      width: size.width * 0.1,
+                      width: size.width * 0.2,
                     ),
                     Container(
                       margin: EdgeInsets.only(right: size.width * 0.03),

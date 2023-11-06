@@ -16,15 +16,19 @@ class _NavbarState extends State<Navbar> {
   static const List<Widget> _widgetOptions = <Widget>[
     HomeScreen(),
     Text(
-      'Index 1: Business',
+      'To Be Updated',
       style: optionStyle,
     ),
     Text(
-      'Index 2: School',
+      'To Be Updated',
       style: optionStyle,
     ),
     Text(
-      'Index 3: Settings',
+      'To Be Updated',
+      style: optionStyle,
+    ),
+    Text(
+      'To Be Updated',
       style: optionStyle,
     ),
   ];
@@ -42,19 +46,27 @@ class _NavbarState extends State<Navbar> {
         child: _widgetOptions.elementAt(_selectedIndex),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.green,
+        showSelectedLabels: false,
+        showUnselectedLabels: false,
+        type: BottomNavigationBarType.fixed,
+        unselectedItemColor: Color.fromARGB(255, 122, 30, 30),
+        backgroundColor: Colors.white,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.business),
-            label: 'Business',
+            icon: Icon(Icons.menu_book_sharp),
+            label: 'Find ',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.school),
-            label: 'School',
+            icon: Icon(Icons.construction_sharp),
+            label: 'Build',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.moped_sharp),
+            label: 'Delivery',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.settings),

@@ -178,7 +178,10 @@ class _HomeScreenState extends State<HomeScreen> {
                 SizedBox(
                   height: size.height * 0.025,
                 ),
-                NurseryFlex(nurseryInstance: outlet[0])
+
+                NurseryFlex(nurseryInstance: outlet[0]),
+                NurseryFlex(nurseryInstance: outlet[1]),
+                NurseryFlex(nurseryInstance: outlet[2])
               ],
             ),
           ),

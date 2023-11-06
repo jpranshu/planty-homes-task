@@ -17,7 +17,7 @@ class NurseryCard extends StatelessWidget {
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(size.height * 0.02),
         side: BorderSide(
-          width: size.width * 0.003,
+          width: size.width * 0.002,
           color: Colors.green,
         ),
       ),
