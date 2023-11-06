@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:planty_homes/screens/home/widget/nursery.dart';
 
-class NurseryCard extends StatelessWidget {
-  const NurseryCard({Key? key, required this.nurseryInstance})
+class NurseryFlex extends StatelessWidget {
+  const NurseryFlex({Key? key, required this.nurseryInstance})
       : super(key: key);
   final Nursery nurseryInstance;
 
@@ -17,27 +17,27 @@ class NurseryCard extends StatelessWidget {
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(size.height * 0.02),
         side: BorderSide(
-          width: size.width * 0.003,
-          color: Colors.green,
+          width: size.width * 0.002,
+          color: Color.fromARGB(255, 116, 20, 13),
         ),
       ),
       elevation: 0,
-      child: Column(
+      child: Row(
         mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
           Expanded(
             child: Container(
-              height: size.height * 0.18,
+              height: size.height * 0.15,
               width: size.width * 0.35,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                    alignment: AlignmentDirectional.topCenter,
+                    alignment: AlignmentDirectional.topStart,
                     image: AssetImage(nurseryInstance.image),
-                    fit: BoxFit.fitWidth),
+                    fit: BoxFit.fitHeight),
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(size.height * 0.02),
-                  topRight: Radius.circular(size.height * 0.02),
+                  bottomLeft: Radius.circular(size.height * 0.02),
                 ),
               ),
             ),
@@ -72,9 +72,10 @@ class NurseryCard extends StatelessWidget {
                       style: cardText,
                     ),
                     SizedBox(
-                      width: size.width * 0.08,
+                      width: size.width * 0.1,
                     ),
                     Container(
+                      margin: EdgeInsets.only(right: size.width * 0.03),
                       color: Color.fromARGB(255, 11, 107, 15),
                       padding: EdgeInsets.symmetric(
                         horizontal: size.width * 0.02,
@@ -109,15 +110,20 @@ class NurseryCard extends StatelessWidget {
                     SizedBox(
                       width: size.width * 0.02,
                     ),
-                    Text(
-                      '₹' + nurseryInstance.price.toString() + '(min.)',
-                      textAlign: TextAlign.end,
-                      style: cardText,
-                    ),
                   ],
+                ),
+                Text(
+                  '₹' + nurseryInstance.price.toString() + '(min.)',
+                  textAlign: TextAlign.end,
+                  style: cardText,
                 ),
                 SizedBox(
                   height: size.height * 0.01,
+                ),
+                Text(
+                  nurseryInstance.category.join(','),
+                  style: cardText,
+                  overflow: TextOverflow.ellipsis,
                 ),
               ],
             ),

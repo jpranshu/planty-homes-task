@@ -7,6 +7,7 @@ import 'package:planty_homes/screens/home/widget/category_card.dart';
 import 'package:planty_homes/screens/home/widget/choice.dart';
 import 'package:planty_homes/screens/home/widget/nursery.dart';
 import 'package:planty_homes/screens/home/widget/nursery_card.dart';
+import 'package:planty_homes/screens/home/widget/nursery_flex.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -161,38 +162,6 @@ class _HomeScreenState extends State<HomeScreen> {
                     children: List.generate(outlet.length, (index) {
                       return NurseryCard(nurseryInstance: outlet[index]);
                     }),
-                    //[ Container(
-                    //   width: size.width * 0.3,
-                    //   color: Colors.red,
-                    // ),
-                    // SizedBox(
-                    //   width: size.width * 0.03,
-                    // ),
-                    // Container(
-                    //   width: size.width * 0.3,
-                    //   color: Colors.blue,
-                    // ),
-                    // SizedBox(
-                    //   width: size.width * 0.03,
-                    // ),
-                    // Container(
-                    //   width: size.width * 0.3,
-                    //   color: Colors.green,
-                    // ),
-                    // SizedBox(
-                    //   width: size.width * 0.03,
-                    // ),
-                    // Container(
-                    //   width: size.width * 0.3,
-                    //   color: Colors.yellow,
-                    // ),
-                    // SizedBox(
-                    //   width: size.width * 0.03,
-                    // ),
-                    // Container(
-                    //   width: size.width * 0.3,
-                    //   color: Colors.orange,
-                    // ),],
                   ),
                 ),
                 SizedBox(
@@ -207,8 +176,9 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
                 SizedBox(
-                  height: size.height * 0.03,
+                  height: size.height * 0.025,
                 ),
+                NurseryFlex(nurseryInstance: outlet[0])
               ],
             ),
           ),
