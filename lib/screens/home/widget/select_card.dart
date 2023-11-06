@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:planty_homes/screens/home/widget/choice.dart';
 
 class SelectCard extends StatelessWidget {
-  SelectCard({Key? key, required this.choice}) : super(key: key);
+  const SelectCard({Key? key, required this.choice}) : super(key: key);
   final Choice choice;
 
   @override
@@ -32,20 +32,11 @@ class SelectCard extends StatelessWidget {
             ),
             Text(
               choice.title,
-              style: TextStyle(color: Colors.green),
+              style: const TextStyle(color: Colors.black),
             ),
           ],
         ),
       ),
     );
-    // return Container(
-    //   width: size.width * 0.2,
-    //   decoration: BoxDecoration(
-    //     image:
-    //         DecorationImage(image: AssetImage(choice.image), fit: BoxFit.fill),
-    //     shape: BoxShape.circle,
-    //   ),
-    // );
   }
 }
-// 

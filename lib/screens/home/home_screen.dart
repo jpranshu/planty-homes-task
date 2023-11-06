@@ -2,7 +2,7 @@
 
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+// import 'package:google_fonts/google_fonts.dart';
 import 'package:planty_homes/screens/home/widget/select_card.dart';
 import 'package:planty_homes/screens/home/widget/choice.dart';
 
@@ -42,7 +42,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.green,
-        title: Text(
+        title: const Text(
           'Planty Homes',
           style: TextStyle(color: Colors.white),
         ),
@@ -123,11 +123,12 @@ class _HomeScreenState extends State<HomeScreen> {
                 SizedBox(
                   height: size.height * 0.015,
                 ),
+                // ignore: sized_box_for_whitespace
                 Container(
                   height: size.height * 0.225,
                   width: double.infinity,
                   child: GridView.count(
-                    physics: NeverScrollableScrollPhysics(),
+                    physics: const NeverScrollableScrollPhysics(),
                     crossAxisCount: 4,
                     children: List.generate(choices.length, (index) {
                       return Center(
@@ -150,6 +151,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 SizedBox(
                   height: size.height * 0.03,
                 ),
+                // ignore: sized_box_for_whitespace
                 Container(
                   height: size.width * 0.3,
                   child: ListView(
