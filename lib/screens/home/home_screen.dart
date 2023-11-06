@@ -3,8 +3,10 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 // import 'package:google_fonts/google_fonts.dart';
-import 'package:planty_homes/screens/home/widget/select_card.dart';
+import 'package:planty_homes/screens/home/widget/category_card.dart';
 import 'package:planty_homes/screens/home/widget/choice.dart';
+import 'package:planty_homes/screens/home/widget/nursery.dart';
+import 'package:planty_homes/screens/home/widget/nursery_card.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -153,43 +155,44 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 // ignore: sized_box_for_whitespace
                 Container(
-                  height: size.width * 0.3,
+                  height: size.height * 0.225,
                   child: ListView(
                     scrollDirection: Axis.horizontal,
-                    children: [
-                      Container(
-                        width: size.width * 0.3,
-                        color: Colors.red,
-                      ),
-                      SizedBox(
-                        width: size.width * 0.03,
-                      ),
-                      Container(
-                        width: size.width * 0.3,
-                        color: Colors.blue,
-                      ),
-                      SizedBox(
-                        width: size.width * 0.03,
-                      ),
-                      Container(
-                        width: size.width * 0.3,
-                        color: Colors.green,
-                      ),
-                      SizedBox(
-                        width: size.width * 0.03,
-                      ),
-                      Container(
-                        width: size.width * 0.3,
-                        color: Colors.yellow,
-                      ),
-                      SizedBox(
-                        width: size.width * 0.03,
-                      ),
-                      Container(
-                        width: size.width * 0.3,
-                        color: Colors.orange,
-                      ),
-                    ],
+                    children: List.generate(outlet.length, (index) {
+                      return NurseryCard(nurseryInstance: outlet[index]);
+                    }),
+                    //[ Container(
+                    //   width: size.width * 0.3,
+                    //   color: Colors.red,
+                    // ),
+                    // SizedBox(
+                    //   width: size.width * 0.03,
+                    // ),
+                    // Container(
+                    //   width: size.width * 0.3,
+                    //   color: Colors.blue,
+                    // ),
+                    // SizedBox(
+                    //   width: size.width * 0.03,
+                    // ),
+                    // Container(
+                    //   width: size.width * 0.3,
+                    //   color: Colors.green,
+                    // ),
+                    // SizedBox(
+                    //   width: size.width * 0.03,
+                    // ),
+                    // Container(
+                    //   width: size.width * 0.3,
+                    //   color: Colors.yellow,
+                    // ),
+                    // SizedBox(
+                    //   width: size.width * 0.03,
+                    // ),
+                    // Container(
+                    //   width: size.width * 0.3,
+                    //   color: Colors.orange,
+                    // ),],
                   ),
                 ),
                 SizedBox(
