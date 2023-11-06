@@ -49,7 +49,7 @@ class _NavbarState extends State<Navbar> {
         showSelectedLabels: false,
         showUnselectedLabels: false,
         type: BottomNavigationBarType.fixed,
-        unselectedItemColor: Color.fromARGB(255, 122, 30, 30),
+        unselectedItemColor: const Color.fromARGB(255, 122, 30, 30),
         backgroundColor: Colors.white,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(

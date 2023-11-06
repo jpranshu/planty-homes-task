@@ -32,7 +32,7 @@ class _DropdownState extends State<Dropdown> {
           value: value,
           child: Text(
             value,
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 12,
               fontWeight: FontWeight.w500,
             ),

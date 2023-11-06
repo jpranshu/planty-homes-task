@@ -18,7 +18,7 @@ class NurseryFlex extends StatelessWidget {
         borderRadius: BorderRadius.circular(size.height * 0.02),
         side: BorderSide(
           width: size.width * 0.002,
-          color: Color.fromARGB(255, 116, 20, 13),
+          color: const Color.fromARGB(255, 116, 20, 13),
         ),
       ),
       elevation: 0,
@@ -65,7 +65,7 @@ class NurseryFlex extends StatelessWidget {
                     Icon(
                       Icons.access_alarm_sharp,
                       size: size.width * 0.04,
-                      color: Color.fromARGB(255, 116, 20, 13),
+                      color: const Color.fromARGB(255, 116, 20, 13),
                     ),
                     Text(
                       nurseryInstance.time,
@@ -76,13 +76,13 @@ class NurseryFlex extends StatelessWidget {
                     ),
                     Container(
                       margin: EdgeInsets.only(right: size.width * 0.03),
-                      color: Color.fromARGB(255, 11, 107, 15),
+                      color: const Color.fromARGB(255, 11, 107, 15),
                       padding: EdgeInsets.symmetric(
                         horizontal: size.width * 0.02,
                       ),
                       child: Text(
                         nurseryInstance.rating.toString(),
-                        style: TextStyle(
+                        style: const TextStyle(
                           color: Colors.white,
                           fontSize: 12,
                           fontWeight: FontWeight.w900,
@@ -101,7 +101,7 @@ class NurseryFlex extends StatelessWidget {
                     Icon(
                       Icons.route,
                       size: size.width * 0.04,
-                      color: Color.fromARGB(255, 116, 20, 13),
+                      color: const Color.fromARGB(255, 116, 20, 13),
                     ),
                     Text(
                       nurseryInstance.distance,
@@ -111,6 +111,9 @@ class NurseryFlex extends StatelessWidget {
                       width: size.width * 0.02,
                     ),
                   ],
+                ),
+                SizedBox(
+                  height: size.height * 0.01,
                 ),
                 Text(
                   '₹' + nurseryInstance.price.toString() + '(min.)',

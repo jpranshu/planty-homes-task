@@ -65,7 +65,7 @@ class NurseryCard extends StatelessWidget {
                     Icon(
                       Icons.access_alarm_sharp,
                       size: size.width * 0.04,
-                      color: Color.fromARGB(255, 116, 20, 13),
+                      color: const Color.fromARGB(255, 116, 20, 13),
                     ),
                     Text(
                       nurseryInstance.time,
@@ -75,13 +75,13 @@ class NurseryCard extends StatelessWidget {
                       width: size.width * 0.08,
                     ),
                     Container(
-                      color: Color.fromARGB(255, 11, 107, 15),
+                      color: const Color.fromARGB(255, 11, 107, 15),
                       padding: EdgeInsets.symmetric(
                         horizontal: size.width * 0.02,
                       ),
                       child: Text(
                         nurseryInstance.rating.toString(),
-                        style: TextStyle(
+                        style: const TextStyle(
                           color: Colors.white,
                           fontSize: 12,
                           fontWeight: FontWeight.w900,
@@ -100,7 +100,7 @@ class NurseryCard extends StatelessWidget {
                     Icon(
                       Icons.route,
                       size: size.width * 0.04,
-                      color: Color.fromARGB(255, 116, 20, 13),
+                      color: const Color.fromARGB(255, 116, 20, 13),
                     ),
                     Text(
                       nurseryInstance.distance,
